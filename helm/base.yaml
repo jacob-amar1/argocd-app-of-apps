@@ -6,13 +6,13 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/jacob-amar1/argocd-app-of-apps.git
+    repoURL: https://github.com/jacob-amar1/argocd-test-flask.git
     targetRevision: HEAD
     path: helm
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: default
 
   # Sync policy
   syncPolicy:
