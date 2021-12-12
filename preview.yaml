@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pr-{{ .PRNUMBER }}-{{ .APPNAME }}
+  name: pr-{{.APPID}}
   namespace: argocd
 spec:
   project: default
@@ -20,7 +20,7 @@ spec:
 
   destination:
     server: https://kubernetes.default.svc
-    namespace: pr-{{ .PRNUMBER }}-{{.APPNAME}}
+    namespace: pr-{{.APPID}}
 
   # Sync policy
   syncPolicy:
